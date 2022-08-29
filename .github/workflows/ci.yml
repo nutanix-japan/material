@@ -13,4 +13,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material 
+      - run: pip intall mkdocs-awesome-pages-plugin
+      - run: pip install search
       - run: mkdocs gh-deploy --force
+      
