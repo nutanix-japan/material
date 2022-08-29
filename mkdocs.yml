@@ -22,11 +22,11 @@ theme:
   palette:
 
     # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      scheme: default
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
+    # - media: "(prefers-color-scheme)"
+    #   scheme: default
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -50,9 +50,13 @@ markdown_extensions:
   - pymdownx.superfences
 plugins:
     - search
-    - awesome-pages
+
+# Style sheeting here
+# extra_css:
+#   - stylesheets/extra.css
+
 nav:
-    - Home: intro.md
+    - Home: index.md
     - What is Calm: 'what_is_calm/what_is_calm.md'
     - Calm Project: 'calm_project/calm_project.md'
     - Calm Marketplace: 'calm_marketplace/calm_marketplace.md'
