@@ -19,22 +19,38 @@ theme:
   - navigation.tracking
   - navigation.sections
   - navigation.expand
-  palette: 
-    # Palette toggle for light mode
-    - scheme: default
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
+plugins:
+    - search
+    - awesome-pages
 nav:
     - Home: intro.md
     - What is Calm: 'what_is_calm/what_is_calm.md'
